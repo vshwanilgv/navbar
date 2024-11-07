@@ -7,6 +7,9 @@ module.exports = (webpackConfigEnv, argv) => {
     projectName: "navbar",
     webpackConfigEnv,
     argv,
+    devServer: {
+      hot: false, // Disable HMR
+    },
   });
 
   return merge(defaultConfig, {
